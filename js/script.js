@@ -5,7 +5,7 @@ let  curfolder
 let songs 
 
 async function getsong(folder) {
-    let response = await fetch(`/song/${folder}/`);
+    let response = await fetch(`/my-music-app/song/${folder}/`);
     let data = await response.text();
     curfolder = folder
 
@@ -78,7 +78,7 @@ currentsong.addEventListener("loadedmetadata", () => {
         `${formatTimeFromSeconds(currentsong.currentTime)} / ${formatTimeFromSeconds(currentsong.duration)}`;
 });
 async function displayalbum(){
-    let a = await fetch(`/song/`);
+    let a = await fetch(`/my-music-app/song/`);
     // console.log(response)
      let response = await a.text();
      let div = document.createElement("div")
@@ -94,7 +94,7 @@ async function displayalbum(){
             let parts = decode.split("\\");
             let fold = parts[parts.length - 1].replace("/", "");
             console.log(fold)
-            let b = await fetch(`/song/${fold}/info.json`);
+            let b = await fetch(`/my-music-app/song/${fold}/info.json`);
             // console.log(response)
               let response1 = await b.json();
               console.log(response1)
