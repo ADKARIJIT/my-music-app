@@ -1,0 +1,656 @@
+/* .container{
+   padding-top: 75px;
+    
+}
+.left {
+    width: 25vw;
+    border: 2px solid red;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    margin-right: 4px;
+}
+
+.right {
+    width: 75vw;
+    height: 100vh;
+    border: 2px solid red;
+} */
+:root {
+    --a: 0 --b: 0
+}
+
+.left img {
+    width: 21px;
+    filter: invert(1);
+}
+
+.close {
+    display: none;
+}
+
+.library {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    width: 24vw;
+    height: 66px;
+    border: 2px solid green;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5px;
+    /* position: fixed; */
+    /* flex-direction: column; */
+
+    /* left: 0%; */
+    /* position: relative; */
+
+}
+
+.libcont {
+    justify-content: space-between;
+    width: 100%;
+    height: 66px;
+    /* position: relative; */
+    flex-direction: column;
+}
+
+.content {
+    overflow: auto;
+    border: 2px solid purple;
+    /* flex-direction: initial; */
+    height: 400px;
+    -ms-overflow-style: none;
+    /* hide scrollbar in IE and Edge */
+    scrollbar-width: none;
+    margin-top: 10px;
+}
+
+.playlist {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2px solid purple;
+    background-color: #1f1f1f;
+    margin: 15px 10px;
+    height: 115px;
+    /* text-align: center; */
+    padding: 2px 11px;
+    border-radius: 10px;
+}
+
+.playlist h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.playlist h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.playlist button {
+    background-color: white;
+    width: 120px;
+    height: 35px;
+    border-radius: 18px;
+    margin-top: 10px;
+    font-weight: bolder;
+}
+
+.browsepodcast {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2px solid purple;
+    background-color: #1f1f1f;
+    margin: 10px 10px;
+    height: 125px;
+    /* text-align: center; */
+    padding: 2px 11px;
+    border-radius: 10px;
+}
+
+.browsepodcast h2 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.browsepodcast h3 {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.browsepodcast button {
+    background-color: white;
+    width: 125px;
+    height: 35px;
+    border-radius: 18px;
+    margin-top: 10px;
+    font-weight: bolder;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+.card {
+    width: 168px;
+    border: 2px solid purple;
+    height: 220px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #1f1f1f;
+    position: relative;
+    flex: 0 0 auto;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.card:hover {
+    background-color: #2d2c2c;
+    --a: 1
+}
+
+
+
+.right>h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    margin: 8px 15px;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+
+}
+
+/* card > *{
+    padding-top: 10px;
+} */
+.card h2 {
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 5px;
+
+
+}
+
+.card h3 {
+    font-size: 12px;
+}
+
+.play {
+    border: 2px solid rgb(14, 223, 14);
+    background-color: rgb(14, 223, 14);
+    border-radius: 60px;
+    width: 40px;
+    height: 40px;
+    align-content: center;
+    position: absolute;
+    right: 14px;
+    top: 125px;
+    opacity: var(--a);
+
+}
+
+.play img {
+    width: 20px;
+    /* filter: invert(1); */
+    margin-left: 11px;
+    margin-top: 4px;
+}
+
+.songcontainer {
+    max-width: 92vw;
+    overflow-x: scroll;
+    margin: 0px 10px;
+    -ms-overflow-style: none;
+    /* hide scrollbar in IE and Edge */
+    scrollbar-width: none;
+}
+
+.songbar ul {
+    padding: 12px;
+    align-items: center;
+    justify-content: center;
+    /* height: 500px; */
+
+
+}
+
+.songbar ul li {
+    list-style-type: none;
+    /* cursor: pointer; */
+
+}
+
+/* .songbar ul li:hover{
+    background-color: black;
+} */
+
+.songformat {
+    width: 277px;
+    height: 60px;
+    border: 1px solid #b1a6a6;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0px 5px;
+    margin-bottom: 14px;
+    font-family: sans-serif;
+    font-size: 11px;
+    background-color: #1f1f1f;
+    cursor: pointer;
+}
+
+.songformat:hover {
+    background-color: black;
+}
+
+.partition {
+    border: 2px solid #625757;
+    width: 100%;
+    height: 2px;
+    background-color: #625757;
+
+}
+
+.songformat span {
+    font-size: 10px;
+}
+
+.songplay {
+
+    justify-content: center;
+    align-items: center;
+    margin-right: 2px;
+    gap: 5px;
+}
+
+.player {
+    width: 73vw;
+    height: 90px;
+    border: 2px solid green;
+    position: fixed;
+    bottom: 12px;
+    background-color: rgb(40, 42, 49);
+
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 30px;
+    border-style: none;
+
+    /* left: 324px; */
+}
+
+.playbutton {
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 30px;
+    border-style: none;
+    width: 70vw;
+    justify-content: space-between;
+}
+
+.player img {
+    width: 56px;
+    height: 37px;
+    border: 2px solid black;
+    border-radius: 23px;
+    border-style: none;
+}
+
+.seekbar {
+    width: 60vw;
+
+    height: 3px;
+    border: 2px solid white;
+    background-color: white;
+    position: absolute;
+    bottom: 3px;
+
+
+    border-radius: 10px;
+    cursor: pointer;
+    left: 14px;
+
+
+
+}
+
+.circle {
+    border: 2px solid white;
+    height: 15px;
+    width: 15px;
+    border-radius: 20px;
+    background-color: white;
+    position: absolute;
+    top: -9px;
+    left: 0%;
+    transition: 0s;
+    cursor: pointer;
+}
+
+.playercontrol {
+    /* gap: 5px; */
+    padding-right: 1px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.scroll-text {
+    width: 250px;
+    /* visible area */
+    height: 25px;
+    overflow: hidden;
+    /* hide overflow */
+    /* border: 2px solid purple; */
+    white-space: nowrap;
+    bottom: 75px;
+    position: fixed;
+}
+
+.duration {
+
+    position: absolute;
+    bottom: 0px;
+    /* left: 14px; */
+    right: 37px;
+}
+
+.control {
+    position: relative;
+    left: 102px;
+}
+
+.songinfo {
+    display: inline-block;
+    padding-left: 20%;
+    animation: scroll 10s linear infinite;
+}
+
+.volsec {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 200px;
+    bottom: 0px;
+    opacity: var(--b);
+}
+
+.vol {
+    opacity: var(--b);
+}
+
+.volumeImage:hover {
+    --b: 1
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.hamburger {
+    filter: invert(1);
+    display: none;
+    padding-right: 20px;
+}
+
+/* @media (max-width: 1041px) {
+  .container {
+    position: relative;
+    display: block; 
+  }
+
+  .left {
+    position: absolute;
+    top: 0;
+    width: 0vw;
+    left: -100%;
+    width: 25vw;
+    z-index: 1;
+  }
+
+  .right {
+    width: 100vw !important;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+.container {
+  display: flex;
+  padding-top: 75px;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.left {
+  width: 25vw;
+  border: 2px solid red;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  margin-right: 4px;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.right {
+  width: 75vw;
+  height: 100vh;
+  border: 2px solid red;
+  transition: all 0.5s ease;
+  position: relative;
+} */
+.container {
+    display: flex;
+    padding-top: 75px;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow-x: hidden;
+    /* prevents scroll when .left goes out */
+}
+
+.left {
+    width: 25vw;
+    border: 2px solid red;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    margin-right: 4px;
+    transition: all 0.5s ease;
+    position: relative;
+    background: black;
+    left: 0px;
+}
+
+.right {
+    width: 75vw;
+    height: 100vh;
+    border: 2px solid red;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+/* 👇 Responsive view */
+@media (max-width: 1041px) {
+    .container {
+        display: block;
+        position: relative;
+        padding-top: 75px;
+    }
+
+    .songcontainer {
+        overflow-wrap: normal;
+        overflow-y: scroll;
+
+    }
+
+    .scroll-text {
+        bottom: 126px;
+
+    }
+
+    .left {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 70vw;
+        /* take most of screen when opened */
+        z-index: 1;
+        /* background: white; */
+        transition: all 0.5s ease;
+        padding-top: 75px;
+    }
+
+    .close {
+        display: block;
+    }
+
+    .right {
+        width: 100vw !important;
+        transition: all 0.5s ease;
+    }
+
+    .player {
+        width: 97vw;
+        height: 150px;
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+        padding-right: 10px;
+    }
+
+    .library {
+        width: 67vw;
+    }
+
+    .seekbar {
+        width: 85vw;
+        left: 20px;
+
+    }
+
+    .control {
+        display: flex;
+        left: 0px;
+
+
+
+
+
+
+    }
+
+    .playercontrol {
+        position: relative;
+        justify-content: space-around;
+
+        gap: 0px;
+
+        left: 0px;
+        top: 2px;
+    }
+
+
+
+
+
+
+    .volsec {
+        right: 10px;
+        position: relative;
+        left: -12px;
+
+
+
+
+    }
+
+
+    .search {
+        width: 65vw;
+        padding: 0px 0px;
+
+
+
+    }
+    .browser{
+        /* padding-right: 10px; */
+    }
+
+    .detail {
+        display: none;
+
+
+    }
+
+    .install {
+        display: none;
+    }
+
+    .login {
+        display: none;
+    }
+
+    .signup {
+        display: none;
+    }
+
+    .nav {
+        justify-content: flex-start;
+    }
+
+    .logo {
+        padding-right: 10px;
+
+    }
+
+    .hamburgernav {
+
+
+
+        display: flex;
+
+    }
+
+    .contentofnav {
+        display: flex;
+        cursor: pointer;
+        position: absolute;
+        transition: all 0.5s ease;
+        width: 65vw !important;
+
+        top: 74px;
+
+        height: 300px;
+    }
+
+    .nav {
+        width: auto;
+    }
+    .duration{
+        position: relative;
+        bottom: 2px;
+        right: 0px;
+        /* justify-content: center;
+        align-items: center; */
+    }
+
+
+
+    /* .searchbar{
+    width: 100px;
+  } */
+}
